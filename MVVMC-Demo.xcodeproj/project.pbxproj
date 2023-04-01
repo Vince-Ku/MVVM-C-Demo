@@ -17,6 +17,11 @@
 		61DA89EC29D87AA900F98999 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89EB29D87AA900F98999 /* Constant.swift */; };
 		61DA89EE29D87AD600F98999 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89ED29D87AD600F98999 /* HomeViewModel.swift */; };
 		61DA89F029D87B3000F98999 /* HomeCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89EF29D87B3000F98999 /* HomeCoordinatorType.swift */; };
+		61DA89F329D87F3000F98999 /* LotteryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89F229D87F3000F98999 /* LotteryRepository.swift */; };
+		61DA89F529D87F3900F98999 /* LotteryRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89F429D87F3900F98999 /* LotteryRepositoryType.swift */; };
+		61DA89F829D87F5F00F98999 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89F729D87F5F00F98999 /* Order.swift */; };
+		61DA89FA29D87F6900F98999 /* OrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89F929D87F6900F98999 /* OrderRepository.swift */; };
+		61DA89FC29D87F7100F98999 /* OrderRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89FB29D87F7100F98999 /* OrderRepositoryType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		61DA89EB29D87AA900F98999 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		61DA89ED29D87AD600F98999 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		61DA89EF29D87B3000F98999 /* HomeCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorType.swift; sourceTree = "<group>"; };
+		61DA89F229D87F3000F98999 /* LotteryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryRepository.swift; sourceTree = "<group>"; };
+		61DA89F429D87F3900F98999 /* LotteryRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryRepositoryType.swift; sourceTree = "<group>"; };
+		61DA89F729D87F5F00F98999 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		61DA89F929D87F6900F98999 /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
+		61DA89FB29D87F7100F98999 /* OrderRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepositoryType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				61DA89EA29D87A8E00F98999 /* AppModel */,
-				61DA89E829D8781600F98999 /* Modules */,
 				61DA89E129D85B1900F98999 /* Coordinator */,
+				61DA89E829D8781600F98999 /* Modules */,
+				61DA89F129D87F1A00F98999 /* Repository */,
 				61DA89B129D85A7C00F98999 /* AppDelegate.swift */,
 				61DA89B329D85A7C00F98999 /* SceneDelegate.swift */,
 				61DA89BA29D85A7D00F98999 /* Assets.xcassets */,
@@ -136,6 +147,26 @@
 				61DA89EB29D87AA900F98999 /* Constant.swift */,
 			);
 			path = AppModel;
+			sourceTree = "<group>";
+		};
+		61DA89F129D87F1A00F98999 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				61DA89F629D87F5200F98999 /* ApiModel */,
+				61DA89F229D87F3000F98999 /* LotteryRepository.swift */,
+				61DA89F429D87F3900F98999 /* LotteryRepositoryType.swift */,
+				61DA89F929D87F6900F98999 /* OrderRepository.swift */,
+				61DA89FB29D87F7100F98999 /* OrderRepositoryType.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		61DA89F629D87F5200F98999 /* ApiModel */ = {
+			isa = PBXGroup;
+			children = (
+				61DA89F729D87F5F00F98999 /* Order.swift */,
+			);
+			path = ApiModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,12 +269,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DA89F329D87F3000F98999 /* LotteryRepository.swift in Sources */,
+				61DA89FC29D87F7100F98999 /* OrderRepositoryType.swift in Sources */,
 				61DA89B229D85A7C00F98999 /* AppDelegate.swift in Sources */,
 				61DA89E329D85B3500F98999 /* StartUpCoordinator.swift in Sources */,
 				61DA89EE29D87AD600F98999 /* HomeViewModel.swift in Sources */,
+				61DA89FA29D87F6900F98999 /* OrderRepository.swift in Sources */,
+				61DA89F829D87F5F00F98999 /* Order.swift in Sources */,
 				61DA89F029D87B3000F98999 /* HomeCoordinatorType.swift in Sources */,
 				61DA89E729D8767900F98999 /* HomeCoordinator.swift in Sources */,
 				61DA89B429D85A7C00F98999 /* SceneDelegate.swift in Sources */,
+				61DA89F529D87F3900F98999 /* LotteryRepositoryType.swift in Sources */,
 				61DA89E529D85C6700F98999 /* HomeViewController.swift in Sources */,
 				61DA89EC29D87AA900F98999 /* Constant.swift in Sources */,
 			);

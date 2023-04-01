@@ -7,12 +7,14 @@
 
 class HomeViewModel {
     private let coordinator: HomeCoordinatorType
+    private let lotteryRepository: LotteryRepositoryType
 
     // MARK: Output
     weak var viewDelegate: HomeViewControllerDelegate?
     
-    init(coordinator: HomeCoordinatorType) {
+    init(coordinator: HomeCoordinatorType, lotteryRepository: LotteryRepositoryType) {
         self.coordinator = coordinator
+        self.lotteryRepository = lotteryRepository
     }
     
     // MARK: Input
@@ -27,7 +29,17 @@ class HomeViewModel {
     }
     
     private func getLotteryResult(completion: (LotteryResult) -> Void) {
-        // TODO: implement getLotteryResult
-        completion(.win)
+        lotteryRepository.fetchLotteryNumber { luckyNumber in
+            //
+            // Note that this logic would be put into the Backend system in the real world
+            //
+            // if this logic become more complex, you can encapsulate to another object (e.g. LottertUseCase)
+            //
+            if luckyNumber > 50 {
+                completion(.win)
+            } else {
+                completion(.lose)
+            }
+        }
     }
 }

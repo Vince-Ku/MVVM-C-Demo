@@ -15,7 +15,7 @@ class HomeCoordinator: HomeCoordinatorType {
     }
     
     func start() {
-        let viewModel = HomeViewModel(coordinator: self)
+        let viewModel = HomeViewModel(coordinator: self, lotteryRepository: LotteryRepository())
         let viewController = HomeViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }
