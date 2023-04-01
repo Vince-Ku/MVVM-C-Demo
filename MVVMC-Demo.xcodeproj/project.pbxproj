@@ -22,6 +22,7 @@
 		61DA89F829D87F5F00F98999 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89F729D87F5F00F98999 /* Order.swift */; };
 		61DA89FA29D87F6900F98999 /* OrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89F929D87F6900F98999 /* OrderRepository.swift */; };
 		61DA89FC29D87F7100F98999 /* OrderRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89FB29D87F7100F98999 /* OrderRepositoryType.swift */; };
+		61DA8A0029D881A000F98999 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89FF29D881A000F98999 /* HomeViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		61DA89F729D87F5F00F98999 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		61DA89F929D87F6900F98999 /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
 		61DA89FB29D87F7100F98999 /* OrderRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepositoryType.swift; sourceTree = "<group>"; };
+		61DA89FF29D881A000F98999 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		61DA89C729D85A7D00F98999 /* MVVMC-DemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				61DA89FD29D8815900F98999 /* Modules */,
 			);
 			path = "MVVMC-DemoTests";
 			sourceTree = "<group>";
@@ -167,6 +170,22 @@
 				61DA89F729D87F5F00F98999 /* Order.swift */,
 			);
 			path = ApiModel;
+			sourceTree = "<group>";
+		};
+		61DA89FD29D8815900F98999 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				61DA89FE29D8816200F98999 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		61DA89FE29D8816200F98999 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				61DA89FF29D881A000F98999 /* HomeViewModelTests.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DA8A0029D881A000F98999 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
