@@ -30,6 +30,7 @@
 		61DA8A0D29D887C200F98999 /* RecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A0C29D887C200F98999 /* RecordsViewModel.swift */; };
 		61DA8A0F29D887E700F98999 /* RecordsCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A0E29D887E700F98999 /* RecordsCoordinatorType.swift */; };
 		61DA8A1129D8882500F98999 /* RecordsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A1029D8882500F98999 /* RecordsCoordinator.swift */; };
+		61DA8A1429D88D5A00F98999 /* RecordsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A1329D88D5A00F98999 /* RecordsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		61DA8A0C29D887C200F98999 /* RecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModel.swift; sourceTree = "<group>"; };
 		61DA8A0E29D887E700F98999 /* RecordsCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinatorType.swift; sourceTree = "<group>"; };
 		61DA8A1029D8882500F98999 /* RecordsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinator.swift; sourceTree = "<group>"; };
+		61DA8A1329D88D5A00F98999 /* RecordsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				61DA89FE29D8816200F98999 /* Home */,
+				61DA8A1229D88D4100F98999 /* Records */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -231,6 +234,14 @@
 				61DA8A0A29D887AF00F98999 /* RecordCellViewObject.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		61DA8A1229D88D4100F98999 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				61DA8A1329D88D5A00F98999 /* RecordsViewModelTests.swift */,
+			);
+			path = Records;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61DA8A0029D881A000F98999 /* HomeViewModelTests.swift in Sources */,
+				61DA8A1429D88D5A00F98999 /* RecordsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
