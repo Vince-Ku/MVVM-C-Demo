@@ -21,9 +21,7 @@ class HomeCoordinator: HomeCoordinatorType {
     }
     
     func navigateToRecordsModule() {
-        // TODO: implement start RecordsModule
-        print("")
-        print("navigateToRecordsModule")
-        print("")
+        let recordsCoordinator = RecordsCoordinator(navigationController: navigationController)
+        recordsCoordinator.start()
     }
 }

@@ -23,6 +23,13 @@
 		61DA89FA29D87F6900F98999 /* OrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89F929D87F6900F98999 /* OrderRepository.swift */; };
 		61DA89FC29D87F7100F98999 /* OrderRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89FB29D87F7100F98999 /* OrderRepositoryType.swift */; };
 		61DA8A0029D881A000F98999 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA89FF29D881A000F98999 /* HomeViewModelTests.swift */; };
+		61DA8A0529D8877400F98999 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A0429D8877400F98999 /* RecordsViewController.swift */; };
+		61DA8A0729D8878B00F98999 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A0629D8878B00F98999 /* RecordTableViewCell.swift */; };
+		61DA8A0929D887A200F98999 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A0829D887A200F98999 /* Record.swift */; };
+		61DA8A0B29D887AF00F98999 /* RecordCellViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A0A29D887AF00F98999 /* RecordCellViewObject.swift */; };
+		61DA8A0D29D887C200F98999 /* RecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A0C29D887C200F98999 /* RecordsViewModel.swift */; };
+		61DA8A0F29D887E700F98999 /* RecordsCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A0E29D887E700F98999 /* RecordsCoordinatorType.swift */; };
+		61DA8A1129D8882500F98999 /* RecordsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA8A1029D8882500F98999 /* RecordsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +62,13 @@
 		61DA89F929D87F6900F98999 /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
 		61DA89FB29D87F7100F98999 /* OrderRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepositoryType.swift; sourceTree = "<group>"; };
 		61DA89FF29D881A000F98999 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		61DA8A0429D8877400F98999 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		61DA8A0629D8878B00F98999 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		61DA8A0829D887A200F98999 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		61DA8A0A29D887AF00F98999 /* RecordCellViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCellViewObject.swift; sourceTree = "<group>"; };
+		61DA8A0C29D887C200F98999 /* RecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModel.swift; sourceTree = "<group>"; };
+		61DA8A0E29D887E700F98999 /* RecordsCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinatorType.swift; sourceTree = "<group>"; };
+		61DA8A1029D8882500F98999 /* RecordsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +136,7 @@
 			children = (
 				61DA89E229D85B3500F98999 /* StartUpCoordinator.swift */,
 				61DA89E629D8767900F98999 /* HomeCoordinator.swift */,
+				61DA8A1029D8882500F98999 /* RecordsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				61DA89E929D8782700F98999 /* Home */,
+				61DA8A0129D8873400F98999 /* Records */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -188,6 +204,35 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		61DA8A0129D8873400F98999 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				61DA8A0329D8875D00F98999 /* Model */,
+				61DA8A0229D8875600F98999 /* View */,
+				61DA8A0C29D887C200F98999 /* RecordsViewModel.swift */,
+				61DA8A0E29D887E700F98999 /* RecordsCoordinatorType.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
+		61DA8A0229D8875600F98999 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61DA8A0429D8877400F98999 /* RecordsViewController.swift */,
+				61DA8A0629D8878B00F98999 /* RecordTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61DA8A0329D8875D00F98999 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61DA8A0829D887A200F98999 /* Record.swift */,
+				61DA8A0A29D887AF00F98999 /* RecordCellViewObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +286,7 @@
 					};
 					61DA89C329D85A7D00F98999 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = 61DA89AD29D85A7C00F98999;
 					};
 				};
@@ -289,15 +335,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				61DA89F329D87F3000F98999 /* LotteryRepository.swift in Sources */,
+				61DA8A0529D8877400F98999 /* RecordsViewController.swift in Sources */,
 				61DA89FC29D87F7100F98999 /* OrderRepositoryType.swift in Sources */,
+				61DA8A0D29D887C200F98999 /* RecordsViewModel.swift in Sources */,
 				61DA89B229D85A7C00F98999 /* AppDelegate.swift in Sources */,
 				61DA89E329D85B3500F98999 /* StartUpCoordinator.swift in Sources */,
 				61DA89EE29D87AD600F98999 /* HomeViewModel.swift in Sources */,
+				61DA8A0929D887A200F98999 /* Record.swift in Sources */,
 				61DA89FA29D87F6900F98999 /* OrderRepository.swift in Sources */,
 				61DA89F829D87F5F00F98999 /* Order.swift in Sources */,
+				61DA8A0729D8878B00F98999 /* RecordTableViewCell.swift in Sources */,
+				61DA8A0B29D887AF00F98999 /* RecordCellViewObject.swift in Sources */,
 				61DA89F029D87B3000F98999 /* HomeCoordinatorType.swift in Sources */,
+				61DA8A1129D8882500F98999 /* RecordsCoordinator.swift in Sources */,
 				61DA89E729D8767900F98999 /* HomeCoordinator.swift in Sources */,
 				61DA89B429D85A7C00F98999 /* SceneDelegate.swift in Sources */,
+				61DA8A0F29D887E700F98999 /* RecordsCoordinatorType.swift in Sources */,
 				61DA89F529D87F3900F98999 /* LotteryRepositoryType.swift in Sources */,
 				61DA89E529D85C6700F98999 /* HomeViewController.swift in Sources */,
 				61DA89EC29D87AA900F98999 /* Constant.swift in Sources */,
@@ -507,15 +560,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25Q4Y7QB9R;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vince.MVVMC-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMC-Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MVVMC-Demo";
@@ -527,11 +587,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25Q4Y7QB9R;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vince.MVVMC-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
