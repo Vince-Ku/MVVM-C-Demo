@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCoordinator {
+class HomeCoordinator: HomeCoordinatorType {
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -15,7 +15,15 @@ class HomeCoordinator {
     }
     
     func start() {
-        let viewController = HomeViewController()
+        let viewModel = HomeViewModel(coordinator: self)
+        let viewController = HomeViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func navigateToRecordsModule() {
+        // TODO: implement start RecordsModule
+        print("")
+        print("navigateToRecordsModule")
+        print("")
     }
 }
