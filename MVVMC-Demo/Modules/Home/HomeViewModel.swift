@@ -5,12 +5,16 @@
 //  Created by 辜敬閎 on 2023/4/1.
 //
 
+protocol HomeViewModelOutputDelegate: AnyObject {
+    func showLotteryResult(result: LotteryResult)
+}
+
 class HomeViewModel {
     private let coordinator: HomeCoordinatorType
     private let lotteryRepository: LotteryRepositoryType
 
     // MARK: Output
-    weak var viewDelegate: HomeViewControllerDelegate?
+    weak var delegate: HomeViewModelOutputDelegate?
     
     init(coordinator: HomeCoordinatorType, lotteryRepository: LotteryRepositoryType) {
         self.coordinator = coordinator
@@ -24,7 +28,7 @@ class HomeViewModel {
 
     func lotteryButtonDidTap() {
         getLotteryResult { [weak self] result in
-            self?.viewDelegate?.showLotteryResult(result: result)
+            self?.delegate?.showLotteryResult(result: result)
         }
     }
     

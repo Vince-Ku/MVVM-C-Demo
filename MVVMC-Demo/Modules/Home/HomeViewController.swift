@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol HomeViewControllerDelegate: AnyObject {
-    func showLotteryResult(result: LotteryResult)
-}
-
 class HomeViewController: UIViewController {
     
     private let buttonsContainerStackView: UIStackView = {
@@ -58,7 +54,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setupDelegate() {
-        viewModel.viewDelegate = self
+        viewModel.delegate = self
     }
     
     private func setupButtonsLayout() {
@@ -84,7 +80,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: HomeViewControllerDelegate {
+extension HomeViewController: HomeViewModelOutputDelegate {
     func showLotteryResult(result: LotteryResult) {
         lotteryButton.setTitle(result.rawValue, for: .normal)
     }
