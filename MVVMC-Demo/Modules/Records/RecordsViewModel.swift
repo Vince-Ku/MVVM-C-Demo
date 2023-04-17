@@ -7,13 +7,17 @@
 
 import Foundation
 
+protocol RecordsViewModelOutputDelegate: AnyObject {
+    func reloadRecords(records: [RecordCellViewObject])
+}
+
 class RecordsViewModel {
     
     private let coordinator: RecordsCoordinatorType
     private let orderRepository: OrderRepositoryType
     
     // MARK: Output
-    weak var viewDelegate: RecordsViewControllerDelegate?
+    weak var delegate: RecordsViewModelOutputDelegate?
     
     init(coordinator: RecordsCoordinatorType, orderRepository: OrderRepositoryType) {
         self.coordinator = coordinator
@@ -25,7 +29,7 @@ class RecordsViewModel {
         getRecords(completion: { [weak self] records in
             guard let self = self else { return }
             let recordsViewObjects = self.tranform(records: records)
-            self.viewDelegate?.reloadRecords(records: recordsViewObjects)
+            self.delegate?.reloadRecords(records: recordsViewObjects)
         })
     }
     

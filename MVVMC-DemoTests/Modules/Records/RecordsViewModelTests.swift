@@ -38,28 +38,28 @@ final class RecordsViewModelTests: XCTestCase {
                                  starImageStyle: .regular),
         ]
         
-        let delegate = MockRecordsViewControllerDelegate()
+        let delegate = MockRecordsViewModelOutputDelegate()
         let coordinator = MockRecordsCoordinator()
         let orderRepository = MockOrderRepository(orders: mockOrders)
             
-        sut = makeSUT(viewDelegate: delegate, coordinator: coordinator, orderRepository: orderRepository)
+        sut = makeSUT(delegate: delegate, coordinator: coordinator, orderRepository: orderRepository)
         
         sut.viewDidLoad()
         
         XCTAssertTrue(delegate.calledFunctions.contains(where: { $0 == .releadRecords(expectedRecordCellViewObject)}))
     }
         
-    private func makeSUT(viewDelegate: RecordsViewControllerDelegate, coordinator: RecordsCoordinatorType, orderRepository: OrderRepositoryType) -> RecordsViewModel {
-        let presenter = RecordsViewModel(coordinator: coordinator, orderRepository: orderRepository)
-        presenter.viewDelegate = viewDelegate
-        return presenter
+    private func makeSUT(delegate: RecordsViewModelOutputDelegate, coordinator: RecordsCoordinatorType, orderRepository: OrderRepositoryType) -> RecordsViewModel {
+        let viewModel = RecordsViewModel(coordinator: coordinator, orderRepository: orderRepository)
+        viewModel.delegate = delegate
+        return viewModel
     }
 }
 
 // MARK: Mock Objects
-private class MockRecordsViewControllerDelegate: RecordsViewControllerDelegate {
+private class MockRecordsViewModelOutputDelegate: RecordsViewModelOutputDelegate {
     enum Function: Equatable {
-        static func == (lhs: MockRecordsViewControllerDelegate.Function, rhs: MockRecordsViewControllerDelegate.Function) -> Bool {
+        static func == (lhs: MockRecordsViewModelOutputDelegate.Function, rhs: MockRecordsViewModelOutputDelegate.Function) -> Bool {
             switch (lhs, rhs) {
             case (.releadRecords(let lViewObjects), .releadRecords(let rViewObjects)):
                 return lViewObjects == rViewObjects
